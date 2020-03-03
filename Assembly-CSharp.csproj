@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Movescript2.cs" />
      <Compile Include="Assets\Scripts\Movescript3.cs" />
      <Compile Include="Assets\Scripts\Movescript4.cs" />
+     <Compile Include="Assets\SimpleControls.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -120,9 +121,6 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/mbawdon/Documents/GitHub/doomba-wars/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.InputSystem">
- <HintPath>C:/Users/kvuong/Documents/GitHub/doomba-wars/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/mbawdon/Documents/GitHub/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -143,6 +141,9 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/mbawdon/Documents/GitHub/doomba-wars/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InputSystem">
+ <HintPath>C:/Users/mbawdon/Documents/GitHub/doomba-wars/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
