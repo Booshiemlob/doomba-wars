@@ -5,20 +5,13 @@ using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
-    private Mesh mesh;
-    private Vector3 origin;
-    private float startingAngle;
-
     //This script was taught by Code Monkey on Youtube. Field of View effec in Unity (Line of Sight, View Cone) & How to create a Mesh from code | Unity Tutorial.
     //Written and modified by Brody to fit the needs of the project.
     private void Start()
     {
         Mesh mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-    }
 
-    private void Update()
-    {
         //This will repalce the array the commented out arrays below to allow for adpation on the player.
         //Easily modifiable.
         float fov = 90f;
@@ -82,15 +75,5 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
-    }
-
-    public void SetOrigin(Vector3 origin)
-    {
-        this.origin = origin;
-    }
-
-    public void SetAimDirection(Vector3 aimDirection)
-    {
-
     }
 }
