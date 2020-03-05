@@ -5,13 +5,20 @@ using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
+    private Mesh mesh;
+    private Vector3 origin;
+    private float startingAngle;
+
     //This script was taught by Code Monkey on Youtube. Field of View effec in Unity (Line of Sight, View Cone) & How to create a Mesh from code | Unity Tutorial.
     //Written and modified by Brody to fit the needs of the project.
     private void Start()
     {
         Mesh mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+    }
 
+    private void Update()
+    {
         //This will repalce the array the commented out arrays below to allow for adpation on the player.
         //Easily modifiable.
         float fov = 90f;
@@ -34,6 +41,27 @@ public class FieldOfView : MonoBehaviour
             //Had to go into the CodeMonkey UtilsClass script and change the formula for the GetVectorAngle.
             //The formula called the angle an int but you want it as a float.
             Vector3 vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
+
+
+            // I would like ot get this chunk of code to work for 3D.
+            //Makes the raycast/mesh bend around objects in the scene rather than going straight through.
+            //If this gets setup I need to add a layer mask as well
+            /*
+            [SerializeField] private LayerMask layerMask;
+            */
+            /*RaycastHit2D raycasHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMask);
+            if (raycasHit2D.collider == null)
+            {
+                //No hit.
+                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
+            }
+            else
+            {
+                //Hit object.
+                vertex = raycasHit2D.point;
+            }*/
+
+
             //Vertex position.
             vertices[vertexIndex] = vertex;
 
@@ -51,18 +79,18 @@ public class FieldOfView : MonoBehaviour
             angle -= angleIncrease;
         }
 
-        // This section was designed to test the origianl mesh.
-        // Keeping it in incase I have to roll back.
-        /*vertices[0] = Vector3.zero;
-        vertices[1] = new Vector3(50, 0);
-        vertices[2] = new Vector3(0, -50);
-
-        triangles[0] = 0;
-        triangles[1] = 1;
-        triangles[2] = 2;*/
-
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
+    }
+
+    public void SetOrigin(Vector3 origin)
+    {
+        this.origin = origin;
+    }
+
+    public void SetAimDirection(Vector3 aimDirection)
+    {
+
     }
 }
