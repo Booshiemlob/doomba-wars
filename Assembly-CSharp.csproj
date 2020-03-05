@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.21f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,9 +54,6 @@
     <UnityVersion>2019.2.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.21f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -63,8 +62,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
+    <Compile Include="Assets\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
+    <Compile Include="Assets\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
+    <Compile Include="Assets\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\Button_Sprite.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\Button_UI.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\FunctionPeriodic.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\FunctionTimer.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\FunctionUpdater.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\UI_Bar.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\UI_BarMultiple.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\UI_Sprite.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\UI_TextComplex.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\UtilsClass.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\World_Bar.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\World_Mesh.cs" />
+    <Compile Include="Assets\CodeMonkey\Utils\World_Sprite.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\controllerinputtester.cs" />
+    <Compile Include="Assets\Scripts\FieldOfView.cs" />
     <Compile Include="Assets\Scripts\Movescript.cs" />
     <Compile Include="Assets\Scripts\Movescript2.cs" />
     <Compile Include="Assets\Scripts\Movescript3.cs" />
@@ -125,34 +142,34 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
-      <HintPath>L:/Unity Projects/doomba-wars/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
