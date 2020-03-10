@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\controllerinputtester.cs" />
      <Compile Include="Assets\Scripts\FieldOfView.cs" />
+     <Compile Include="Assets\Scripts\spawnmanager.cs" />
      <Compile Include="Assets\SimpleControls.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
