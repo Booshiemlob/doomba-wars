@@ -19,7 +19,6 @@ namespace SAE
         public Rigidbody greenPlayer;           // Reference to green players' Rigidbody component.
 
         public float moveSpeed = 5f;            // Velocity speed of moving players.
-        public Vector2 wrapSize;                // When a players position goes outside these (width/height) values, teleport to other side.
 
         // Methods
         private void Update()
@@ -47,28 +46,8 @@ namespace SAE
 
 
 
-            // Check for offscreen loop.
-            Transform[] allPlayerTransforms = { this.yellowPlayer.transform, this.bluePlayer.transform, this.redPlayer.transform, this.greenPlayer.transform };
-            foreach( Transform playerTransform in allPlayerTransforms )
-            {
-                Vector3 tmpPosition = playerTransform.position;
-
-                // Check left/right sides.
-                if( tmpPosition.x < -this.wrapSize.x ) { tmpPosition.x = this.wrapSize.x +( tmpPosition.x + this.wrapSize.x ); }
-                else if( tmpPosition.x > this.wrapSize.x ) { tmpPosition.x = -this.wrapSize.x +( tmpPosition.x - this.wrapSize.x ); }
-
-                // Check top/bottom sides.
-                if( tmpPosition.z < -this.wrapSize.y ) { tmpPosition.z = this.wrapSize.y +( tmpPosition.z + this.wrapSize.y ); }
-                else if( tmpPosition.z > this.wrapSize.y ) { tmpPosition.z = -this.wrapSize.y +( tmpPosition.z - this.wrapSize.y ); }
-
-                playerTransform.position = tmpPosition;
-            }
         }
 
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawWireCube( Vector3.zero, new Vector3( this.wrapSize.x, 0f, this.wrapSize.y ) * 2f );
-        }
+
     }
 }
