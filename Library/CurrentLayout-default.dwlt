@@ -92,10 +92,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1308
-  m_MinSize: {x: 913, y: 444}
-  m_MaxSize: {x: 22008, y: 10022}
+  m_MinSize: {x: 911, y: 444}
+  m_MaxSize: {x: 22006, y: 10022}
   vertical: 0
-  controlID: 125
+  controlID: 124
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 36
+  controlID: 13
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -328,20 +328,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: a6ebffffeaecffff3cf9ffffa0f9fffff4f9ffff90faffff72fbffffa6390000
+      m_SelectedIDs: fc3d0000
+      m_LastClickedID: 15868
+      m_ExpandedIDs: c4e2ffffbaedffffccf6ffff56fbffffce3800007e390000843900008e390000aa390000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Player3
-        m_OriginalName: Player3
+        m_Name: Player2
+        m_OriginalName: Player2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 14854
+        m_UserData: 14542
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -431,20 +431,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\kvuong\Documents\GitHub\doomba-wars
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0c330000
-    m_LastClickedID: 13068
-    m_ExpandedIDs: 00000000c82f0000763200000c330000fe330000683500007a3700007c3700007e370000803700008237000000ca9a3b
+    m_SelectedIDs: ce340000
+    m_LastClickedID: 13518
+    m_ExpandedIDs: 00000000da2f00008a32000020330000123400007c350000723700007437000076370000783700007a37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -472,7 +472,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c82f00000c3300007a3700007c3700007e3700008037000082370000
+    m_ExpandedIDs: 00000000da2f00008a32000020330000123400007c350000723700007437000076370000783700007a370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -645,9 +645,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -34.946968, y: 0.5500001, z: -19.946966}
+    m_Target: {x: -2.3062315, y: 2.114378, z: -4.1530557}
     speed: 2
-    m_Value: {x: -34.946968, y: 0.5500001, z: -19.946966}
+    m_Value: {x: -2.3062315, y: 2.114378, z: -4.1530557}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -676,13 +676,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.5710813, y: 0.37612498, z: -0.33009434, w: -0.6507197}
+    m_Target: {x: -0.47959605, y: 0.4319013, z: -0.29377753, w: -0.7050869}
     speed: 2
-    m_Value: {x: -0.5710807, y: 0.37612456, z: -0.33009398, w: -0.650719}
+    m_Value: {x: -0.47959512, y: 0.43190047, z: -0.29377696, w: -0.7050855}
   m_Size:
-    m_Target: 16.35353
+    m_Target: 33.730827
     speed: 2
-    m_Value: 16.35353
+    m_Value: 33.730827
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Kent's Scene.unity
+- path: Assets/Scenes/Brody.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
