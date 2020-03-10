@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using SAE;
 
 public class FieldOfView : MonoBehaviour
 {
+    private bool hasfunction;
+
     //This script was taught by Code Monkey on Youtube. Field of View effec in Unity (Line of Sight, View Cone) & How to create a Mesh from code | Unity Tutorial.
     //Written and modified by Brody to fit the needs of the project.
     private void Start()
@@ -84,6 +87,13 @@ public class FieldOfView : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log( "SUCK!: " +other.gameObject.name );
+        GameObject go;
+        hasfunction = other.gameObject.GetComponent<DestroyMe>();
+        if (hasfunction)
+        {
+            Destroy(other.gameObject);
+        }
+
     }
 
 }

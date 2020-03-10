@@ -2,29 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnmanager : MonoBehaviour
+namespace SAE
 {
-    public Transform trash;
-    public int trashnum;
-    // Start is called before the first frame update
-    void Start()
+    public class spawnmanager : MonoBehaviour
     {
-        for (int i = 0; i < 40; i++)
+        public Transform trash;
+        public Rigidbody rb;
+        public float forceAdded = 10f;
+        Transform go;
+        // Start is called before the first frame update
+        void Start()
         {
-            Instantiate(trash, new Vector3(Random.Range(35, -35), 0, Random.Range(20, -20)), Quaternion.identity);
-            trashnum = 40;
-        }
-        
-    }
+            for (int i = 0; i < 40; i++)
+            {
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (trashnum <= 40)
-        {
-            Instantiate(trash, new Vector3(Random.Range(35, -35), 0, Random.Range(20, -20)), Quaternion.identity);
-            trashnum += 1;  
+                go = Instantiate(trash, new Vector3(Random.Range(15, -15), 50, Random.Range(10, -10)), Quaternion.identity);
+                rb = go.gameObject.GetComponent<Rigidbody>();
+                rb.AddForce(new Vector3(Random.Range(3, -3), Random.Range(3, -3), Random.Range(3, -3))*forceAdded);
+                GameManager_Test1.trashCount = 40;
+            }
+
         }
-        
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (GameManager_Test1.trashCount <= 40)
+            {
+
+                go = Instantiate(trash, new Vector3(Random.Range(15, -15), 50, Random.Range(10, -10)), Quaternion.identity);
+                rb = go.gameObject.GetComponent<Rigidbody>();
+                rb.AddForce(new Vector3(Random.Range(3, -3), Random.Range(3, -3), Random.Range(3, -3)) * forceAdded);
+                GameManager_Test1.trashCount++;
+            }
+
+        }
     }
 }
+

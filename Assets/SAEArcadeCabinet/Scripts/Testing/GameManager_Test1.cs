@@ -12,6 +12,7 @@ namespace SAE
 {
     public class GameManager_Test1 : MonoBehaviour
     {
+        [SerializeField]public static int trashCount = 0;
         // Properties
         public Rigidbody yellowPlayer;          // Reference to yellow players' Rigidbody component.
         public Rigidbody bluePlayer;            // Reference to blue players' Rigidbody component.
@@ -62,7 +63,7 @@ namespace SAE
             { Debug.Log( "YELLOW player pressed button 1 (Not held down)" ); }
 
             // **OLD ROTATION** transform.RotateAround(0, Input.GetAxis("Horizontal"), 0);
-
+            Debug.Log(trashCount);
         }
 
 
