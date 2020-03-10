@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Brody 2 Electric Boogalo.unity
-=======
-- path: Assets/Scenes/Brody.unity
->>>>>>> dcfe0b7062181c902ba7ff17d0900a6f43998811
   isLoaded: 1
   isActive: 1
   isSubScene: 0
