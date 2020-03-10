@@ -14,12 +14,12 @@ public class FieldOfView : MonoBehaviour
 
         //This will repalce the array the commented out arrays below to allow for adpation on the player.
         //Easily modifiable.
-        float fov = 90f;
+        float fov = 70f;
         Vector3 origin = Vector3.zero;
         int rayCount = 50;
         float angle = 0f;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 50f;
+        float viewDistance = 20f;
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1]; //rayCount + 1 + 1 means one array will project one array at 0 one array at 45 and one array at 90.
         Vector2[] uv = new Vector2[vertices.Length];
