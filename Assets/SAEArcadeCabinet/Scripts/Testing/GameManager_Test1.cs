@@ -19,6 +19,7 @@ namespace SAE
         public Rigidbody greenPlayer;           // Reference to green players' Rigidbody component.
 
         public float moveSpeed = 5f;            // Velocity speed of moving players.
+        public float rotateSpeed = 3.0f;
 
         // Methods
         private void Update()
@@ -26,6 +27,22 @@ namespace SAE
             // Poll SAE.ArcadeMachine for players' joystick axis and use to set Rigidbody velocity.
             Vector2 axisValues = SAE.ArcadeMachine.PlayerJoystickAxisStatic( ArcadeMachine.PlayerColorId.YELLOW_PLAYER );
             this.yellowPlayer.velocity = new Vector3( axisValues.x, 0f, -axisValues.y ) * this.moveSpeed;
+            //Prototype code for rotation, it works but flicks back to normal.
+            Quaternion rot = this.yellowPlayer.transform.rotation;
+            this.yellowPlayer.transform.forward = new Vector3(axisValues.x, 0f, -axisValues.y);
+            this.yellowPlayer.transform.rotation = Quaternion.Slerp(rot, this.yellowPlayer.transform.rotation, Time.deltaTime * rotateSpeed);
+            
+            //My code testing
+            /*if (Vector3.Distance(yellowPlayer.position, transform.position) > 1)
+                {
+                Quaternion lookDirection = Quaternion.LookRotation(yellowPlayer.transform.position - transform.position);
+                transform.position = Quaternion.Slerp(transform.rotation, lookDirection, moveSpeed * Time.deltaTime);
+                }*/
+
+            //Gareth Code testig, explained everything to me as we went.
+            /*this.yellowPlayer.transform.forward = new Vector3(axisValues.x, 0f, axisValues.y );
+            Vector3 newForward = new Vector3(axisValues.x, 0f, axisValues.y);
+            this.yellowPlayer.transform.forward = Vector3.Lerp( this.yellowPlayer.transform.forward, newForward, Time.deltaTime *rotateSpeed );*/
 
             axisValues = SAE.ArcadeMachine.PlayerJoystickAxisStatic( ArcadeMachine.PlayerColorId.BLUE_PLAYER );
             this.bluePlayer.velocity = new Vector3( axisValues.x, 0f, -axisValues.y ) * this.moveSpeed;
@@ -44,7 +61,7 @@ namespace SAE
             if( SAE.ArcadeMachine.PlayerPressingButtonStatic( ArcadeMachine.PlayerColorId.YELLOW_PLAYER, 1, true ) == true )
             { Debug.Log( "YELLOW player pressed button 1 (Not held down)" ); }
 
-
+            // **OLD ROTATION** transform.RotateAround(0, Input.GetAxis("Horizontal"), 0);
 
         }
 
