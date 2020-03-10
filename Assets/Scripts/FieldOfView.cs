@@ -75,5 +75,15 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
+
+        MeshCollider mc = this.gameObject.GetComponent<MeshCollider>();
+        if (mc != null) { mc.sharedMesh = mesh; }
+
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log( "SUCK!: " +other.gameObject.name );
+    }
+
 }
