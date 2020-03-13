@@ -47,15 +47,27 @@ namespace SAE
 
             axisValues = SAE.ArcadeMachine.PlayerJoystickAxisStatic( ArcadeMachine.PlayerColorId.BLUE_PLAYER );
             this.bluePlayer.velocity = new Vector3( axisValues.x, 0f, -axisValues.y ) * this.moveSpeed;
+            //Prototype code for rotation, it works but flicks back to normal.
+            Quaternion rot1 = this.bluePlayer.transform.rotation;
+            this.bluePlayer.transform.forward = new Vector3(axisValues.x, 0f, -axisValues.y);
+            this.bluePlayer.transform.rotation = Quaternion.Slerp(rot, this.bluePlayer.transform.rotation, Time.deltaTime * rotateSpeed);
 
             axisValues = SAE.ArcadeMachine.PlayerJoystickAxisStatic( ArcadeMachine.PlayerColorId.RED_PLAYER );
             this.redPlayer.velocity = new Vector3( axisValues.x, 0f, -axisValues.y ) * this.moveSpeed;
+            //Prototype code for rotation, it works but flicks back to normal.
+            Quaternion rot2 = this.redPlayer.transform.rotation;
+            this.redPlayer.transform.forward = new Vector3(axisValues.x, 0f, -axisValues.y);
+            this.redPlayer.transform.rotation = Quaternion.Slerp(rot, this.redPlayer.transform.rotation, Time.deltaTime * rotateSpeed);
 
             axisValues = SAE.ArcadeMachine.PlayerJoystickAxisStatic( ArcadeMachine.PlayerColorId.GREEN_PLAYER );
             this.greenPlayer.velocity = new Vector3( axisValues.x, 0f, -axisValues.y ) * this.moveSpeed;
+            //Prototype code for rotation, it works but flicks back to normal.
+            Quaternion rot3 = this.greenPlayer.transform.rotation;
+            this.greenPlayer.transform.forward = new Vector3(axisValues.x, 0f, -axisValues.y);
+            this.greenPlayer.transform.rotation = Quaternion.Slerp(rot, this.greenPlayer.transform.rotation, Time.deltaTime * rotateSpeed);
 
             // Poll SAE.ArcadeMachine for YELLOW players' button 0 (True if held down)
-            if( SAE.ArcadeMachine.PlayerPressingButtonStatic( ArcadeMachine.PlayerColorId.YELLOW_PLAYER, 0 ) == true )
+            if ( SAE.ArcadeMachine.PlayerPressingButtonStatic( ArcadeMachine.PlayerColorId.YELLOW_PLAYER, 0 ) == true )
             { Debug.Log( "YELLOW player pressed button 0 (Held down)" ); }
 
             // Poll SAE.ArcadeMachine for YELLOW players' button 1 (True if pressed once .. eg. not held down)
