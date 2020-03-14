@@ -13,13 +13,13 @@ namespace SAE
         // Start is called before the first frame update
         void Start()
         {
-            for (int i = 0; i < 40; i++)
+            for (int i = 0; i < 100; i++)
             {
 
-                go = Instantiate(trash, new Vector3(Random.Range(15, -15), 50, Random.Range(10, -10)), Quaternion.identity);
+                go = Instantiate(trash, new Vector3(Random.Range(25, -25), 50, Random.Range(20, -20)), Quaternion.identity);
                 rb = go.gameObject.GetComponent<Rigidbody>();
                 rb.AddForce(new Vector3(Random.Range(3, -3), Random.Range(3, -3), Random.Range(3, -3))*forceAdded);
-                GameManager_Test1.trashCount = 40;
+                GameManager_Test1.trashCount = 100;
             }
 
         }
@@ -27,10 +27,10 @@ namespace SAE
         // Update is called once per frame
         void Update()
         {
-            if (GameManager_Test1.trashCount <= 40)
+            if (GameManager_Test1.trashCount <= 100)
             {
 
-                go = Instantiate(trash, new Vector3(Random.Range(15, -15), 50, Random.Range(10, -10)), Quaternion.identity);
+                go = Instantiate(trash, new Vector3(Random.Range(25, -25), 50, Random.Range(20, -20)), Quaternion.identity);
                 rb = go.gameObject.GetComponent<Rigidbody>();
                 rb.AddForce(new Vector3(Random.Range(3, -3), Random.Range(3, -3), Random.Range(3, -3)) * forceAdded);
                 GameManager_Test1.trashCount++;
