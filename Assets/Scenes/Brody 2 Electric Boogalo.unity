@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -908,6 +908,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5409166564525361804}
     m_Modifications:
+    - target: {fileID: 1098040837599023465, guid: ce9bbd71951f36248a595e520a4dbcc0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3073524245895543362, guid: ce9bbd71951f36248a595e520a4dbcc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -968,7 +973,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: FieldOfView
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1098040837599023465, guid: ce9bbd71951f36248a595e520a4dbcc0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce9bbd71951f36248a595e520a4dbcc0, type: 3}
 --- !u!1 &1769843531
 GameObject:
@@ -1397,6 +1403,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065298296}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2071601520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3073524245895543372, guid: ce9bbd71951f36248a595e520a4dbcc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1523151020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2071601525
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071601520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!4 &556304972489078249
 Transform:
   m_ObjectHideFlags: 0

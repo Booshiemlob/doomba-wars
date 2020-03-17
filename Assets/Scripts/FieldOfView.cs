@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
@@ -19,7 +19,7 @@ public class FieldOfView : MonoBehaviour
         //Easily modifiable.
         float fov = 75f;
         Vector3 origin = Vector3.zero;
-        int rayCount = 50;
+        int rayCount = 75;
         float angle = 0f;
         float angleIncrease = fov / rayCount;
         float viewDistance = 15f;
