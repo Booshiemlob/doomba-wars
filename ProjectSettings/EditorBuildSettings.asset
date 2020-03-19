@@ -14,4 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mike.unity
     guid: fe4cad56ab7e9f94c8d6dcca65754850
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Brody 2 Electric Boogalo.unity
+    guid: 6fb7a9b9cc4269b4c92b00015329322d
+  - enabled: 1
+    path: Assets/Scenes/Kent's Scene.unity
+    guid: dcfa081b9dbb20643a91fd2f77a1f3b2
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: fac875addfe354c4baf3af95b3900049,
+      type: 2}
