@@ -1,13 +1,19 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using CodeMonkey.Utils;
 using SAE;
+using UnityEngine.UI;
+using TMPro;
 
 public class FieldOfView : MonoBehaviour
 {
     private bool hasfunction;
     public int score = 0;
+    public TMP_Text scoreUI;
+
+//f7c77f648e138f0da24b0e629069f7f0cdf3068b
     //This script was taught by Code Monkey on Youtube. Field of View effec in Unity (Line of Sight, View Cone) & How to create a Mesh from code | Unity Tutorial.
     //Written and modified by Brody to fit the needs of the project.
     private void Start()
@@ -84,6 +90,11 @@ public class FieldOfView : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        scoreUI.text = "Score " + score;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log( "SUCK!: " +other.gameObject.name );
@@ -91,6 +102,7 @@ public class FieldOfView : MonoBehaviour
         hasfunction = other.gameObject.GetComponent<DestroyMe>();
         if (hasfunction)
         {
+            score++;
             Destroy(other.gameObject);
             score++;
         }

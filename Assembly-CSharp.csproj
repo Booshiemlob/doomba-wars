@@ -82,7 +82,6 @@
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\controllerinputtester.cs" />
      <Compile Include="Assets\Scripts\FieldOfView.cs" />
-     <Compile Include="Assets\Scripts\Hasitcollided.cs" />
      <Compile Include="Assets\Scripts\QuitButton.cs" />
      <Compile Include="Assets\Scripts\ScoreUI.cs" />
      <Compile Include="Assets\Scripts\spawnmanager.cs" />

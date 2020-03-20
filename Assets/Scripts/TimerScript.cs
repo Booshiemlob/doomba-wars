@@ -4,11 +4,12 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TimerScript : MonoBehaviour
 {
     public float time;
-    public Text timeUI;
+    public TMP_Text timeUI;
     // Start is called before the first frame update
     void Update()
     {
