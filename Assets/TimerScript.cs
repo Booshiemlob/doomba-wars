@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
     public float time;
+    public Text timeUI;
     // Start is called before the first frame update
     void Update()
     {
-        time -= Time.deltaTime;
+        timeUI.text = "Time Remaining: " + Convert.ToInt32(time);
+        time -= 1 * Time.deltaTime;
         if(time <= 0)
         {
-
+            SceneManager.LoadScene("End");
         }
     }
 }
