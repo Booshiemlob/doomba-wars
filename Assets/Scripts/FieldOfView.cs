@@ -7,6 +7,7 @@ using SAE;
 public class FieldOfView : MonoBehaviour
 {
     private bool hasfunction;
+    public int score = 0;
 
     //This script was taught by Code Monkey on Youtube. Field of View effec in Unity (Line of Sight, View Cone) & How to create a Mesh from code | Unity Tutorial.
     //Written and modified by Brody to fit the needs of the project.
@@ -91,6 +92,7 @@ public class FieldOfView : MonoBehaviour
         hasfunction = other.gameObject.GetComponent<DestroyMe>();
         if (hasfunction)
         {
+            score++;
             Destroy(other.gameObject);
         }
 
