@@ -25,7 +25,7 @@ namespace SAE
         // Methods
         private void Update()
         {
-            // Poll SAE.ArcadeMachine for players' joystick axis and use to set Rigidbody velocity.
+            //Poll SAE.ArcadeMachine for players' joystick axis and use to set Rigidbody velocity.
             Vector2 axisValues = SAE.ArcadeMachine.PlayerJoystickAxisStatic( ArcadeMachine.PlayerColorId.YELLOW_PLAYER );
             this.yellowPlayer.velocity = new Vector3( axisValues.x, 0f, -axisValues.y ) * this.moveSpeed;
             //Prototype code for rotation, it works but flicks back to normal.
