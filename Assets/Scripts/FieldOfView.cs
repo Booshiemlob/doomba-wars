@@ -5,12 +5,13 @@ using UnityEngine;
 using CodeMonkey.Utils;
 using SAE;
 using UnityEngine.UI;
+using TMPro;
 
 public class FieldOfView : MonoBehaviour
 {
     private bool hasfunction;
     public int score = 0;
-    public Text scoreUI;
+    public TMP_Text scoreUI;
 
     //This script was taught by Code Monkey on Youtube. Field of View effec in Unity (Line of Sight, View Cone) & How to create a Mesh from code | Unity Tutorial.
     //Written and modified by Brody to fit the needs of the project.
