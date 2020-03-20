@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\FieldOfView.cs" />
     <Compile Include="Assets\Scripts\Hasitcollided.cs" />
     <Compile Include="Assets\Scripts\spawnmanager.cs" />
+    <Compile Include="Assets\Scripts\TimerScript.cs" />
     <Compile Include="Assets\SimpleControls.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -124,7 +125,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\TimerScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -148,34 +148,34 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>E:/TheSquire/doomba-wars/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>G:/School/Trimester 4/GDS210/Project 2/Group Concept/Unity/doomba-wars/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
