@@ -925,7 +925,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123886813}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1691,8 +1691,9 @@ GameObject:
   - component: {fileID: 1174214429}
   - component: {fileID: 1174214431}
   - component: {fileID: 1174214430}
+  - component: {fileID: 1174214432}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: scoreboard1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1835,6 +1836,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174214428}
   m_CullTransparentMesh: 0
+--- !u!114 &1174214432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174214428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432a7c776bc3e448b5369eb75cd2c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  text: {fileID: 0}
 --- !u!1 &1179596624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2164,7 @@ GameObject:
   - component: {fileID: 1945160262}
   - component: {fileID: 1945160264}
   - component: {fileID: 1945160263}
+  - component: {fileID: 1945160265}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2168,7 +2184,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123886813}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2293,6 +2309,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945160261}
   m_CullTransparentMesh: 0
+--- !u!114 &1945160265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945160261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432a7c776bc3e448b5369eb75cd2c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  text: {fileID: 0}
 --- !u!1 &2123886809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,8 +2415,8 @@ RectTransform:
   m_Children:
   - {fileID: 1179596625}
   - {fileID: 388188491}
-  - {fileID: 1945160262}
   - {fileID: 468612075}
+  - {fileID: 1945160262}
   - {fileID: 608512113}
   - {fileID: 80645215}
   - {fileID: 1174214429}
