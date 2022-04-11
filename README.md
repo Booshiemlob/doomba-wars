@@ -6,7 +6,7 @@ when the time runs out wins.
 
 Mike will be the inspirational leader, do the 3D modelling
 
-Kent will do the majority of programming and music
+Mooshie will do the majority of programming and music
 
 Daniel will do the UI  and  Level  Concept Artist
 
